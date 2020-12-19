@@ -1,0 +1,29 @@
+name: sort_and_average
+version: "0.0"
+author: me
+about: Helps learn rust
+args:
+    - verbose:
+        short: v
+        multiple: true
+        help: Sets the level of verbosity
+subcommands:
+    - sort:
+	about: Sort an input file 
+        args:
+            - input:
+                short: i
+                long: input
+                value_name: input
+                help: input data file
+                takes_value: true
+            - output:
+                short: o
+                long: output
+                value_name: output
+                help: output file. Otherwise stdout
+            - sort_algo:
+                short: a
+                long: algo
+                value_name: algo
+                help: algorithm to do sort
