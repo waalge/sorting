@@ -6,7 +6,7 @@ use rand::Rng;
 fn rng_vec(len: usize) -> Vec<usize> {
     let mut v = Vec::new();
     for _ii in 0..len {
-        v.push(rand::thread_rng().gen_range(0, 10000));
+        v.push(rand::thread_rng().gen_range(0, 1000000));
     }
     v
 }

@@ -17,3 +17,4 @@ Goals:
 3. Add docs 
 4. Make error handling coherent
 5. Move from `usize` to numeric 
+6. Repeat for search
