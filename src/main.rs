@@ -1,6 +1,6 @@
 use clap::{App, Arg, ArgMatches, SubCommand};
 
-use sort_search::{gen_data, run_sort};
+use sorting::{gen_data, run_sort};
 
 fn main() {
     let matches = get_args();
@@ -26,10 +26,10 @@ fn main() {
 }
 
 fn get_args() -> ArgMatches<'static> {
-    App::new("sort_search")
+    App::new("sorting")
         .version("0.1")
         .author("me")
-        .about("learn rust")
+        .about("simple sort algos to learn some rust")
         .subcommand(
             SubCommand::with_name("gen_data")
                 .arg(
