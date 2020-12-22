@@ -6,15 +6,13 @@ Aim:
 
 Goals: 
 
-* Implement a number of sort and search algorithms.
+* Implement a number of sort algorithms.
 * Integrate functionality into a CLI tool.
 * Create docs, tests and benchmarks for these. 
 
 ## TODOs 
 
-1. Write one more sort algorithms 
-2. Implement benchmarking
-3. Add docs 
+1. Implement benchmarking
+2. Add docs 
 4. Make error handling coherent
-5. Move from `usize` to numeric 
-6. Repeat for search
+5. Move from `usize` to numeric generic
