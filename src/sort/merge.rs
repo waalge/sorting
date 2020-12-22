@@ -6,6 +6,7 @@ pub fn run(vec: Vec<usize>) -> Vec<usize> {
 }
 
 fn merge<'a>(src : &'a mut [usize], trg : &'a mut [usize]) -> () {
+    // TODO : tidy this up
 
     if src.len() > 1 {
         let (trg_l, trg_r) = trg.split_at_mut(src.len()/2);
