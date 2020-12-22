@@ -1,6 +1,3 @@
-use std::time::Duration;
-use std::thread;
-
 pub fn run(vec: Vec<usize>) -> Vec<usize> {
     let mut vec = vec;
     sort(&mut vec[..]);
@@ -19,19 +16,17 @@ fn sort(vec : &mut [usize]){
 fn partition(vec : &mut [usize]) -> 
 (&mut [usize], &mut [usize]) {
     let pivot = vec[vec.len()/2];
-    //println!("piv {}", pivot);
-    //println!("sta {:?}", vec);
     let mut lo : isize = -1;
     let mut hi = vec.len() as isize;
     let (left, right) = loop{
         loop {
-            lo = lo + 1;
+            lo += 1;
             if lo >= hi || vec[lo as usize] >= pivot {
                 break;
             }
         }
         loop {
-            hi = hi - 1;
+            hi -= 1;
             if vec[hi as usize] <= pivot {
                 break;
             }

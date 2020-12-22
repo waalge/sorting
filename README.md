@@ -12,7 +12,7 @@ Goals:
 
 ## TODOs 
 
-1. Write two more sort algorithms 
+1. Write one more sort algorithms 
 2. Implement benchmarking
 3. Add docs 
 4. Make error handling coherent

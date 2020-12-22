@@ -9,7 +9,7 @@ pub fn run(vec: Vec<usize>) -> Vec<usize> {
                 swapped = true;
             }
         }
-        if swapped == false {
+        if !swapped {
             break;
         }
     }

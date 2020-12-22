@@ -2,6 +2,7 @@
 
 mod bubble;
 mod quick;
+mod merge;
 
 pub fn run(algo: &str, vec: Vec<usize>) -> Vec<usize> {
     match algo {
@@ -10,6 +11,9 @@ pub fn run(algo: &str, vec: Vec<usize>) -> Vec<usize> {
         }
         "quick" => {
             quick::run(vec)
+        }
+        "merge" => {
+            merge::run(vec)
         }
         _ => {
             println!("I don't know how to do {}", algo);
@@ -63,6 +67,8 @@ mod tests {
     }
 
 
+    // BUBBLE 
+
     #[test]
     fn bubble_small() {
         build_test("bubble", Size::Small);
@@ -81,6 +87,8 @@ mod tests {
     fn bubble_large() {
         timeit(bubble_large_setup);
     }
+
+    // QUICK
 
     #[test]
     fn quick_small() {
@@ -101,5 +109,25 @@ mod tests {
         timeit(quick_large_setup);
     }
 
+    // MERGE
+
+    #[test]
+    fn merge_small() {
+        build_test("merge", Size::Small);
+    }
+
+    #[test]
+    fn merge_medium() {
+        build_test("merge", Size::Medium);
+    }
+
+    fn merge_large_setup() {
+        build_test("merge", Size::Large);
+    }
+
+    #[test]
+    fn merge_large() {
+        timeit(merge_large_setup);
+    }
 }
 
