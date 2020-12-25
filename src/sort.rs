@@ -35,7 +35,6 @@ mod tests {
         Small,
         Medium,
         Large,
-        XLarge,
     }
 
     fn build_test(algo: &str, size: Size) {
@@ -50,12 +49,6 @@ mod tests {
                 let mut rng = thread_rng();
                 src.shuffle(&mut rng);
                 ( src, (0..10000).collect() ) 
-            }
-            Size::XLarge => {
-                let mut src : Vec<usize> = (0..1000000).collect();
-                let mut rng = thread_rng();
-                src.shuffle(&mut rng);
-                ( src, (0..1000000).collect() ) 
             }
         };
         let res = run(algo, src);
@@ -118,15 +111,6 @@ mod tests {
         timeit(quick_large_setup);
     }
 
-    fn quick_x_large_setup() {
-        build_test("quick", Size::XLarge);
-    }
-
-    #[test]
-    fn quick_x_large() {
-        timeit(quick_x_large_setup);
-    }
-
     // MERGE
 
     #[test]
@@ -147,15 +131,5 @@ mod tests {
     fn merge_large() {
         timeit(merge_large_setup);
     }
-
-    fn merge_x_large_setup() {
-        build_test("merge", Size::XLarge);
-    }
-
-    #[test]
-    fn merge_x_large() {
-        timeit(merge_x_large_setup);
-    }
-
 }
 

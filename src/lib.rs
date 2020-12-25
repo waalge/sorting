@@ -4,7 +4,7 @@ use std::error::Error;
 
 pub mod gen_data;
 
-mod sort;
+pub mod sort;
 
 fn to_string(x: usize) -> String {
     // TODO : Work out how this is supposed to work
