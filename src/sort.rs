@@ -1,8 +1,9 @@
-// Handle and run different sort algorithms
-
 mod bubble;
 mod quick;
 mod merge;
+
+/// Handle the running of different sort algorithms
+/// or exit if algorithm not recognized.
 
 pub fn run(algo: &str, vec: Vec<usize>) -> Vec<usize> {
     match algo {

@@ -12,7 +12,6 @@ Goals:
 
 ## TODOs 
 
-1. Implement benchmarking
-2. Add docs 
+2. Add better formatted/ actually helpful docs
 4. Make error handling coherent
 5. Move from `usize` to numeric generic

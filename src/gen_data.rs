@@ -37,6 +37,10 @@ fn write_vec(
     Ok(())
 }
 
+/// Generates some numbers to then try sorting.
+///
+/// The vector of numbers are written to the output file,
+/// one per line.
 pub fn gen_data(
     output: &str,
     len: usize,
